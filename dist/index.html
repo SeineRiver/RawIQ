@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="RawIQ xây dựng nền tảng dữ liệu, giải pháp AI và sản phẩm AI cho ngân hàng và dịch vụ tài chính." />
+    <meta name="description" content="RawIQ tư vấn, xây dựng nền tảng dữ liệu và cung cấp sản phẩm AI cho ngân hàng và dịch vụ tài chính." />
+    <meta name="robots" content="index, follow" />
+    <meta name="color-scheme" content="light" />
     <meta name="theme-color" content="#071b2d" />
     <title>RawIQ | AI cho ngân hàng và dịch vụ tài chính</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23071b2d'/%3E%3Cpath d='M14 35c8-18 28-24 38-7' fill='none' stroke='%2327c6c9' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M15 43c12-12 25-14 35-5' fill='none' stroke='%23ff4f45' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='18' cy='47' r='4' fill='%23fff'/%3E%3C/svg%3E" />
@@ -11,20 +13,20 @@
     <link rel="stylesheet" href="overrides.css" />
   </head>
   <body>
+    <a class="skip-link" href="#top" data-i18n="common.skip">Bỏ qua đến nội dung chính</a>
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="#top" aria-label="RawIQ home">
-          <span class="brand-mark" aria-hidden="true"><i></i><b></b></span>
-          <span class="brand-name">rawiq</span>
+        <a class="brand" href="#top" aria-label="Trang chủ RawIQ" data-i18n-aria-label="common.home">
+          <img class="brand-logo" src="assets/rawiq-logo.webp" alt="" width="224" height="125" />
         </a>
-        <nav class="desktop-nav" aria-label="Điều hướng chính">
+        <nav class="desktop-nav" aria-label="Điều hướng chính" data-i18n-aria-label="nav.label">
           <a href="#about" data-i18n="nav.about">Về RawIQ</a>
           <a href="#services" data-i18n="nav.services">Dịch vụ</a>
           <a href="#solutions" data-i18n="nav.solutions">Giải pháp</a>
           <a href="#case-study" data-i18n="nav.case">Tình huống</a>
         </nav>
         <div class="nav-actions">
-          <button class="language-toggle" type="button" aria-label="Switch language" data-lang-toggle>EN</button>
+          <button class="language-toggle" type="button" aria-label="Switch to English" data-lang-toggle>EN</button>
           <a class="button button-small" href="mailto:team@rawiq-ai.com" data-i18n="nav.contact">Liên hệ</a>
         </div>
       </div>
@@ -34,12 +36,12 @@
       <section class="hero section-dark">
         <div class="hero-grid container">
           <div class="hero-copy">
-            <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="hero.eyebrow">AI solutions for banking &amp; financial services</span></p>
+            <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="hero.eyebrow">Giải pháp AI cho ngân hàng &amp; dịch vụ tài chính</span></p>
             <h1 data-i18n="hero.title">Biến dữ liệu thành năng lực cạnh tranh.</h1>
             <p class="hero-lead" data-i18n="hero.lead">RawIQ đồng hành cùng các tổ chức tài chính trong việc xây dựng nền tảng dữ liệu, triển khai AI và tạo ra kết quả kinh doanh có thể đo lường.</p>
             <div class="hero-actions">
-              <a class="button button-primary" href="mailto:team@rawiq-ai.com" data-i18n="hero.cta">Trao đổi với chúng tôi <span aria-hidden="true">↗</span></a>
-              <a class="text-link" href="#services" data-i18n="hero.secondary">Khám phá năng lực <span aria-hidden="true">↓</span></a>
+              <a class="button button-primary" href="mailto:team@rawiq-ai.com" data-i18n="hero.cta">Trao đổi với chúng tôi</a>
+              <a class="text-link" href="#services" data-i18n="hero.secondary">Khám phá năng lực</a>
             </div>
             <div class="hero-meta">
               <span data-i18n="hero.meta1">Dữ liệu · AI · Tài chính</span>
@@ -47,8 +49,8 @@
             </div>
           </div>
           <div class="hero-visual hero-image">
-            <img src="assets/rawiq-data-flow.png" alt="Minh họa dòng chảy dữ liệu và AI của RawIQ" />
-            <div class="hero-image-caption"><span class="mini-dot"></span><strong data-i18n="hero.visualTitle">Data → AI → Value</strong><span data-i18n="hero.visual">Mỗi quyết định bắt đầu từ dữ liệu</span></div>
+            <img src="assets/rawiq-data-flow.webp" alt="Minh họa dòng chảy dữ liệu và AI của RawIQ" data-i18n-alt="hero.imageAlt" width="1672" height="941" fetchpriority="high" />
+            <div class="hero-image-caption"><span class="mini-dot"></span><strong data-i18n="hero.visualTitle">Dữ liệu · AI · Giá trị</strong><span data-i18n="hero.visual">Mỗi quyết định bắt đầu từ dữ liệu</span></div>
           </div>
         </div>
       </section>
@@ -60,14 +62,14 @@
             <h2 data-i18n="about.title">Đội ngũ thực chiến cho những bài toán khó.</h2>
           </div>
           <div class="about-copy">
-            <p data-i18n="about.body1">RawIQ được xây dựng bởi những chuyên gia đã nhiều năm làm việc với hệ thống dữ liệu lớn, data lake, data products và AI cho ngân hàng, tài chính.</p>
-            <div class="expertise-grid"><div><strong>Data</strong><span>Platforms &amp; products</span></div><div><strong>AI</strong><span>Research &amp; delivery</span></div><div><strong>Finance</strong><span>Banking domain depth</span></div></div>
-            <p class="about-note" data-i18n="about.body2">Kỹ thuật tiêu chuẩn quốc tế, hiểu biết sâu về nghiệp vụ tài chính.</p>
+            <p data-i18n="about.body1">RawIQ được xây dựng bởi các chuyên gia có nhiều năm kinh nghiệm với hệ thống dữ liệu lớn, hồ dữ liệu, sản phẩm dữ liệu và AI trong ngân hàng, tài chính.</p>
+            <div class="expertise-grid"><div><strong data-i18n="about.dataTitle">Dữ liệu</strong><span data-i18n="about.dataBody">Nền tảng &amp; sản phẩm</span></div><div><strong>AI</strong><span data-i18n="about.aiBody">Nghiên cứu &amp; triển khai</span></div><div><strong data-i18n="about.financeTitle">Tài chính</strong><span data-i18n="about.financeBody">Hiểu sâu nghiệp vụ ngân hàng</span></div></div>
+            <p class="about-note" data-i18n="about.body2">Chúng tôi kết hợp năng lực kỹ thuật tiêu chuẩn quốc tế với hiểu biết sâu về nghiệp vụ tài chính để biến tham vọng AI thành nền tảng, sản phẩm và kết quả bền vững.</p>
           </div>
         </div>
         <div class="container institution-strip">
           <p data-i18n="about.institutions">Kinh nghiệm của đội ngũ đến từ các trường đại học và hệ sinh thái công nghệ hàng đầu</p>
-          <div class="institution-names"><span>Johns Hopkins</span><span>Georgia Tech</span><span>NUS</span><span>NTU</span><span>AWS</span><span>Azure</span></div>
+          <div class="institution-names"><span>Johns Hopkins</span><span>Georgia Tech</span><span>NUS</span><span>NTU</span><span>AWS</span><span>GCP</span><span>Azure</span></div>
         </div>
       </section>
 
@@ -78,23 +80,24 @@
             <p data-i18n="services.intro">Chúng tôi giúp ngân hàng xây dựng nền tảng đúng, tích hợp đúng và tạo giá trị thật từ dữ liệu và AI.</p>
           </div>
           <div class="service-grid">
-            <article class="service-card"><span class="service-index">01</span><h3 data-i18n="services.s1.title">Tư vấn chiến lược &amp; kiến trúc</h3><p data-i18n="services.s1.body">Định hình chiến lược dữ liệu, kiến trúc doanh nghiệp, operating model và lộ trình chuyển đổi có thể triển khai.</p><a href="mailto:team@rawiq-ai.com" class="card-link" data-i18n="common.discuss">Trao đổi nhu cầu <span>↗</span></a></article>
-            <article class="service-card"><span class="service-index">02</span><h3 data-i18n="services.s2.title">Nền tảng dữ liệu &amp; AI</h3><p data-i18n="services.s2.body">Thiết kế và xây dựng DWH, data lake, data mesh, governance, metadata, chất lượng dữ liệu và năng lực phân tích.</p><a href="mailto:team@rawiq-ai.com" class="card-link" data-i18n="common.discuss">Trao đổi nhu cầu <span>↗</span></a></article>
-            <article class="service-card"><span class="service-index">03</span><h3 data-i18n="services.s3.title">Chuyển đổi số &amp; trải nghiệm</h3><p data-i18n="services.s3.body">Tái thiết kế workflow theo hướng data-driven, AI-assisted; kết nối digital identity, eKYC, chatbot và AI agents.</p><a href="mailto:team@rawiq-ai.com" class="card-link" data-i18n="common.discuss">Trao đổi nhu cầu <span>↗</span></a></article>
-            <article class="service-card"><span class="service-index">04</span><h3 data-i18n="services.s4.title">Triển khai &amp; phát triển năng lực</h3><p data-i18n="services.s4.body">Đồng hành cùng đội ngũ nội bộ từ xây dựng giải pháp đến tích hợp, vận hành, chuyển giao và đo lường hiệu quả.</p><a href="mailto:team@rawiq-ai.com" class="card-link" data-i18n="common.discuss">Trao đổi nhu cầu <span>↗</span></a></article>
+            <article class="service-card"><span class="service-index">01</span><h3 data-i18n="services.s1.title">Chiến lược &amp; lộ trình</h3><p data-i18n="services.s1.body">Đánh giá hiện trạng, xác định kiến trúc mục tiêu và xây dựng kế hoạch hành động với ưu tiên, nguồn lực và dự toán đầu tư rõ ràng.</p><a href="mailto:team@rawiq-ai.com" class="card-link" data-i18n="common.discuss">Trao đổi nhu cầu</a></article>
+            <article class="service-card"><span class="service-index">02</span><h3 data-i18n="services.s2.title">Thiết kế &amp; xây dựng</h3><p data-i18n="services.s2.body">Thiết kế, xây dựng và tích hợp nền tảng dữ liệu, phân tích và AI phù hợp với kiến trúc, quy trình và yêu cầu quản trị của doanh nghiệp.</p><a href="mailto:team@rawiq-ai.com" class="card-link" data-i18n="common.discuss">Trao đổi nhu cầu</a></article>
+            <article class="service-card"><span class="service-index">03</span><h3 data-i18n="services.s3.title">Vận hành &amp; phát triển năng lực</h3><p data-i18n="services.s3.body">Đồng hành cùng đội ngũ nội bộ trong tích hợp, vận hành, chuyển giao và phát triển sản phẩm để tạo giá trị lâu dài từ nền tảng.</p><a href="mailto:team@rawiq-ai.com" class="card-link" data-i18n="common.discuss">Trao đổi nhu cầu</a></article>
           </div>
         </div>
       </section>
 
       <section id="solutions" class="section section-solutions">
         <div class="container">
-          <div class="section-heading light-heading"><div><p class="section-kicker" data-i18n="solutions.kicker">Giải pháp</p><h2 data-i18n="solutions.title">AI được thiết kế cho công việc thật.</h2></div><p data-i18n="solutions.intro">Các mô-đun có thể tích hợp vào quy trình hiện hữu, phù hợp với dữ liệu, chính sách và yêu cầu quản trị của từng ngân hàng.</p></div>
+          <div class="section-heading light-heading"><div><p class="section-kicker" data-i18n="solutions.kicker">Sản phẩm AI</p><h2 data-i18n="solutions.title">Copilot cho công việc ngân hàng thực tế.</h2></div><p data-i18n="solutions.intro">Các sản phẩm sẵn sàng tùy biến và tích hợp với dữ liệu, chính sách, quy trình và yêu cầu quản trị của từng tổ chức.</p></div>
           <div class="solution-layout">
-            <div class="solution-visual"><div class="stack-label">AGENTIC PLATFORM</div><div class="stack-box stack-top"><b>Agent layer</b><span>Doc Check · Analytics · Reports</span></div><div class="stack-box stack-middle"><b>Service layer</b><span>Workflows · Tools · Approvals</span></div><div class="stack-box stack-bottom"><b>Data layer</b><span>LLM · Knowledge · APIs</span></div></div>
+            <div class="solution-visual"><div class="stack-label">RAWIQ AGENTIC PLATFORM</div><div class="stack-box stack-top"><b data-i18n="solutions.layer1.title">Tầng tác nhân</b><span data-i18n="solutions.layer1.body">Kiểm tra hồ sơ · Phân tích · Báo cáo</span></div><div class="stack-box stack-middle"><b data-i18n="solutions.layer2.title">Tầng dịch vụ</b><span data-i18n="solutions.layer2.body">Quy trình · Công cụ · Phê duyệt</span></div><div class="stack-box stack-bottom"><b data-i18n="solutions.layer3.title">Tầng dữ liệu</b><span data-i18n="solutions.layer3.body">LLM · Tri thức · API</span></div></div>
             <div class="solution-list">
-              <article><span>01</span><div><h3 data-i18n="solutions.s1.title">Agentic AI Platform</h3><p data-i18n="solutions.s1.body">Nền tảng điều phối agent, công cụ và workflow để tự động hóa quy trình và tối ưu vận hành.</p></div></article>
-              <article><span>02</span><div><h3 data-i18n="solutions.s2.title">Agentic Lending System</h3><p data-i18n="solutions.s2.body">Hỗ trợ kiểm tra hồ sơ, phân tích chỉ tiêu và tạo báo cáo trong quy trình cấp tín dụng.</p></div></article>
-              <article><span>03</span><div><h3 data-i18n="solutions.s3.title">Fraud, AML &amp; Customer 360</h3><p data-i18n="solutions.s3.body">Kết nối dữ liệu, phát hiện bất thường và hỗ trợ đánh giá rủi ro trong các nghiệp vụ tài chính.</p></div></article>
+              <article><span>01</span><div><h3 data-i18n="solutions.s1.title">Credit Intelligence Copilot</h3><p data-i18n="solutions.s1.body">Phân tích hồ sơ, báo cáo tài chính và chính sách tín dụng để hỗ trợ thẩm định nhất quán.</p></div></article>
+              <article><span>02</span><div><h3 data-i18n="solutions.s2.title">KYC/AML Investigation Copilot</h3><p data-i18n="solutions.s2.body">Tập hợp bằng chứng, giải thích cảnh báo và soạn dự thảo báo cáo điều tra.</p></div></article>
+              <article><span>03</span><div><h3 data-i18n="solutions.s3.title">Relationship Manager Copilot</h3><p data-i18n="solutions.s3.body">Tạo hồ sơ tóm tắt khách hàng, nhận diện cơ hội và chuẩn bị nội dung cho cuộc gặp.</p></div></article>
+              <article><span>04</span><div><h3 data-i18n="solutions.s4.title">Operations Copilot</h3><p data-i18n="solutions.s4.body">Xử lý tài liệu, hỗ trợ ngoại lệ và tăng tốc công việc của các nhóm vận hành nội bộ.</p></div></article>
+              <article><span>05</span><div><h3 data-i18n="solutions.s5.title">Compliance Knowledge Assistant</h3><p data-i18n="solutions.s5.body">Trả lời có dẫn nguồn từ quy định và chính sách nội bộ để hỗ trợ tra cứu tuân thủ.</p></div></article>
             </div>
           </div>
         </div>
@@ -102,19 +105,19 @@
 
       <section id="case-study" class="section section-case">
         <div class="container case-grid">
-          <div class="case-intro"><p class="section-kicker" data-i18n="case.kicker">Tình huống tiêu biểu</p><h2 data-i18n="case.title">Tái thiết kế quy trình cấp tín dụng bằng AI agents.</h2><p data-i18n="case.body">RawIQ kết nối các agent để biến hồ sơ, phân tích và báo cáo thành một luồng liền mạch.</p><a class="button button-primary" href="mailto:team@rawiq-ai.com" data-i18n="case.cta">Trao đổi về bài toán của bạn <span>↗</span></a></div>
-          <div class="case-visual"><img src="assets/rawiq-lending-workflow.png" alt="Minh họa quy trình hồ sơ vay được kiểm tra, phân tích và phê duyệt bằng AI" /><div class="case-tags"><span>Doc Check</span><span>Analytics</span><span>Reports Maker</span></div><div class="case-note" data-i18n="case.note">Minh họa tiềm năng vận hành — không phải kết quả khách hàng đã được xác minh.</div></div>
+          <div class="case-intro"><p class="section-kicker" data-i18n="case.kicker">Tình huống tiêu biểu</p><h2 data-i18n="case.title">Tái thiết kế quy trình cấp tín dụng bằng AI agents.</h2><p data-i18n="case.body">Một bộ hồ sơ vay có thể chứa hàng chục trang tài liệu và yêu cầu nhiều bước kiểm tra chéo. RawIQ kết nối các agent để biến quy trình rời rạc thành một luồng liền mạch, có kiểm soát và dễ truy xuất.</p><a class="button button-primary" href="mailto:team@rawiq-ai.com" data-i18n="case.cta">Trao đổi về bài toán của bạn</a></div>
+          <div class="case-visual"><img src="assets/rawiq-lending-workflow.webp" alt="Minh họa quy trình hồ sơ vay được kiểm tra, phân tích và phê duyệt bằng AI" data-i18n-alt="case.imageAlt" width="1536" height="1024" loading="lazy" decoding="async" /><div class="case-tags"><span data-i18n="case.tag1">Kiểm tra hồ sơ</span><span data-i18n="case.tag2">Phân tích</span><span data-i18n="case.tag3">Tạo báo cáo</span></div><div class="case-note" data-i18n="case.note">Minh họa tiềm năng vận hành — không phải kết quả khách hàng đã được xác minh.</div></div>
         </div>
       </section>
 
       <section class="section section-proof">
-        <div class="container proof-grid"><div><p class="section-kicker" data-i18n="proof.kicker">Kinh nghiệm thị trường</p><h2 data-i18n="proof.title">Hiểu hệ sinh thái. Xây được hệ thống.</h2></div><div><p class="proof-copy" data-i18n="proof.body">Đội ngũ RawIQ có kinh nghiệm làm việc với các bài toán dữ liệu, AI và chuyển đổi số trong lĩnh vực ngân hàng và dịch vụ tài chính.</p><div class="bank-list" aria-label="Selected banking institutions"><span>MB</span><span>Techcombank</span><span>VPBank</span><span>VietinBank</span><span>SHB</span><span>BIDV</span><span>Vietcombank</span><span>ACB</span></div><p class="proof-caption" data-i18n="proof.caption">Các tổ chức ngân hàng tiêu biểu trong hệ sinh thái và kinh nghiệm thị trường.</p></div></div>
+        <div class="container proof-grid"><div><p class="section-kicker" data-i18n="proof.kicker">Kinh nghiệm thị trường</p><h2 data-i18n="proof.title">Hiểu hệ sinh thái. Xây được hệ thống.</h2></div><div><p class="proof-copy" data-i18n="proof.body">Đội ngũ RawIQ có kinh nghiệm làm việc với các bài toán dữ liệu, AI và chuyển đổi số trong lĩnh vực ngân hàng và dịch vụ tài chính.</p><div class="bank-logo-panel"><img src="assets/banking-logos.webp" alt="Logo của các tổ chức ngân hàng tiêu biểu" data-i18n-alt="proof.logosAlt" width="1344" height="672" loading="lazy" decoding="async" /></div><p class="proof-caption" data-i18n="proof.caption">Các tổ chức ngân hàng tiêu biểu trong hệ sinh thái và kinh nghiệm thị trường.</p></div></div>
       </section>
 
-      <section id="contact" class="section section-contact section-dark"><div class="container contact-wrap"><div><p class="section-kicker" data-i18n="contact.kicker">Kết nối</p><h2 data-i18n="contact.title">Bắt đầu từ bài toán quan trọng nhất.</h2><p data-i18n="contact.body">Hãy cho chúng tôi biết bạn đang muốn cải thiện điều gì với dữ liệu và AI.</p></div><div class="contact-actions"><a class="button button-primary" href="mailto:team@rawiq-ai.com" data-i18n="contact.cta">Liên hệ RawIQ <span>↗</span></a><a class="contact-email" href="mailto:team@rawiq-ai.com">team@rawiq-ai.com</a><a class="contact-phone" href="tel:+84981215599">+84 981 215 599</a></div></div></section>
+      <section id="contact" class="section section-contact section-dark"><div class="container contact-wrap"><div><p class="section-kicker" data-i18n="contact.kicker">Kết nối</p><h2 data-i18n="contact.title">Bắt đầu từ bài toán quan trọng nhất.</h2><p data-i18n="contact.body">Hãy cho chúng tôi biết bạn đang muốn cải thiện điều gì với dữ liệu và AI.</p></div><div class="contact-actions"><a class="button button-primary" href="mailto:team@rawiq-ai.com" data-i18n="contact.cta">Liên hệ RawIQ</a><a class="contact-email" href="mailto:team@rawiq-ai.com">team@rawiq-ai.com</a><a class="contact-phone" href="tel:+84981215599">+84 981 215 599</a></div></div></section>
     </main>
 
-    <footer class="site-footer"><div class="container footer-wrap"><div class="footer-brand"><span class="brand-mark" aria-hidden="true"><i></i><b></b></span><span class="brand-name">rawiq</span></div><p data-i18n="footer.tagline">AI solutions for banking &amp; financial services</p><span class="footer-copy">© <span id="year"></span> RawIQ</span></div></footer>
+    <footer class="site-footer"><div class="container footer-wrap"><div class="footer-brand"><img class="brand-logo brand-logo-footer" src="assets/rawiq-logo.webp" alt="RawIQ" width="224" height="125" loading="lazy" decoding="async" /></div><p data-i18n="footer.tagline">Giải pháp AI cho ngân hàng &amp; dịch vụ tài chính</p><span class="footer-copy">© <span id="year"></span> RawIQ</span></div></footer>
     <script src="script.js"></script>
   </body>
 </html>
