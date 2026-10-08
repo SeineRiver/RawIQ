@@ -28,6 +28,11 @@ a:focus-visible,button:focus-visible{outline:3px solid #fff;outline-offset:3px;b
 .expertise-grid span,.case-tags span,.case-note,.proof-caption,.footer-copy{font-size:12px}
 .bank-logo-panel{padding:12px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 12px 40px rgba(7,27,45,.06)}
 .bank-logo-panel img{display:block;width:100%;height:auto;border-radius:14px}
+.desktop-nav a{transition:color .2s,background-color .2s}
+.desktop-nav a:first-child{background:transparent;color:inherit}
+.desktop-nav a.is-active,.desktop-nav a[aria-current="location"]{background:rgba(255,255,255,.14);color:#fff}
+.language-toggle{display:inline-flex;align-items:center;gap:6px}
+.language-flag{font-size:16px;line-height:1}
 .contact-email:hover,.contact-phone:hover{color:var(--cyan)}
 @media (min-width:901px){.solution-visual{position:sticky;top:118px}}
 @media (max-width:900px){.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.solution-visual{position:relative;top:auto}}

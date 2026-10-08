@@ -4,11 +4,12 @@ const translations = {
     "common.home": "Trang chủ RawIQ",
     "common.discuss": "Trao đổi nhu cầu",
     "nav.label": "Điều hướng chính",
+    "nav.home": "Trang chủ",
     "nav.about": "Về RawIQ",
     "nav.services": "Dịch vụ",
     "nav.solutions": "Sản phẩm AI",
     "nav.case": "Tình huống",
-    "nav.contact": "Liên hệ",
+    "nav.connect": "Kết nối",
     "hero.eyebrow": "Giải pháp AI cho ngân hàng & dịch vụ tài chính",
     "hero.title": "Biến dữ liệu thành năng lực cạnh tranh.",
     "hero.lead": "RawIQ đồng hành cùng các tổ chức tài chính trong việc xây dựng nền tảng dữ liệu, triển khai AI và tạo ra kết quả kinh doanh có thể đo lường.",
@@ -82,11 +83,12 @@ const translations = {
     "common.home": "RawIQ home",
     "common.discuss": "Discuss your needs",
     "nav.label": "Primary navigation",
+    "nav.home": "Home",
     "nav.about": "About RawIQ",
     "nav.services": "Services",
     "nav.solutions": "AI products",
     "nav.case": "Use case",
-    "nav.contact": "Contact",
+    "nav.connect": "Connect",
     "hero.eyebrow": "AI solutions for banking & financial services",
     "hero.title": "Turn data into a competitive advantage.",
     "hero.lead": "RawIQ helps financial institutions build data foundations, deploy AI, and create measurable business outcomes.",
@@ -162,17 +164,21 @@ const languageMeta = {
     title: "RawIQ | AI cho ngân hàng và dịch vụ tài chính",
     description: "RawIQ tư vấn, xây dựng nền tảng dữ liệu và cung cấp sản phẩm AI cho ngân hàng và dịch vụ tài chính.",
     toggleText: "EN",
+    toggleFlag: "🇺🇸",
     toggleLabel: "Switch to English"
   },
   en: {
     title: "RawIQ | AI for Banking & Financial Services",
     description: "RawIQ advises, builds data platforms, and delivers AI products for banking and financial services.",
     toggleText: "VI",
+    toggleFlag: "🇻🇳",
     toggleLabel: "Chuyển sang tiếng Việt"
   }
 };
 
 const toggle = document.querySelector("[data-lang-toggle]");
+const toggleFlag = toggle.querySelector("[data-lang-flag]");
+const toggleCode = toggle.querySelector("[data-lang-code]");
 const description = document.querySelector('meta[name="description"]');
 let lang = "vi";
 
@@ -197,7 +203,8 @@ function applyLanguage(next, persist = true) {
 
   document.title = languageMeta[lang].title;
   description.setAttribute("content", languageMeta[lang].description);
-  toggle.textContent = languageMeta[lang].toggleText;
+  toggleFlag.textContent = languageMeta[lang].toggleFlag;
+  toggleCode.textContent = languageMeta[lang].toggleText;
   toggle.setAttribute("aria-label", languageMeta[lang].toggleLabel);
 
   if (persist) {
@@ -220,3 +227,78 @@ try {
   // Vietnamese remains the default when browser storage is unavailable.
 }
 applyLanguage(preferredLanguage, false);
+
+const navLinks = [...document.querySelectorAll('.desktop-nav a[href^="#"]')];
+const navSections = navLinks
+  .map((link) => ({ link, section: document.querySelector(link.hash) }))
+  .filter(({ section }) => section);
+const siteHeader = document.querySelector(".site-header");
+let scrollFrameRequested = false;
+let clickedSectionId = null;
+let clickLockTimer = null;
+
+function setActiveNav(sectionId) {
+  navSections.forEach(({ link, section }) => {
+    const isActive = section.id === sectionId;
+    link.classList.toggle("is-active", isActive);
+    if (isActive) link.setAttribute("aria-current", "location");
+    else link.removeAttribute("aria-current");
+  });
+}
+
+function syncActiveNav() {
+  const headerHeight = siteHeader ? siteHeader.getBoundingClientRect().height : 0;
+  const activationLine = headerHeight + Math.min(window.innerHeight * 0.25, 180);
+  const pageBottom = window.scrollY + window.innerHeight;
+  const documentHeight = document.documentElement.scrollHeight;
+
+  if (pageBottom >= documentHeight - 2) {
+    clickedSectionId = null;
+    setActiveNav(navSections.at(-1)?.section.id || "");
+    scrollFrameRequested = false;
+    return;
+  }
+
+  if (clickedSectionId) {
+    const clickedSection = navSections.find(({ section }) => section.id === clickedSectionId)?.section;
+    if (clickedSection) {
+      const rect = clickedSection.getBoundingClientRect();
+      setActiveNav(clickedSectionId);
+      if (rect.top <= activationLine && rect.bottom > activationLine) clickedSectionId = null;
+      else {
+        scrollFrameRequested = false;
+        return;
+      }
+    }
+  }
+
+  const current = navSections.reduce((active, entry) => {
+    return entry.section.getBoundingClientRect().top <= activationLine ? entry : active;
+  }, null);
+
+  setActiveNav(current ? current.section.id : "");
+  scrollFrameRequested = false;
+}
+
+function requestNavSync() {
+  if (scrollFrameRequested) return;
+  scrollFrameRequested = true;
+  window.requestAnimationFrame(syncActiveNav);
+}
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    clickedSectionId = link.hash.slice(1);
+    setActiveNav(clickedSectionId);
+    window.clearTimeout(clickLockTimer);
+    clickLockTimer = window.setTimeout(() => {
+      clickedSectionId = null;
+      requestNavSync();
+    }, 1200);
+  });
+});
+
+window.addEventListener("scroll", requestNavSync, { passive: true });
+window.addEventListener("resize", requestNavSync);
+window.addEventListener("hashchange", requestNavSync);
+requestNavSync();
