@@ -8,6 +8,7 @@
     <title>RawIQ | AI cho ngân hàng và dịch vụ tài chính</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23071b2d'/%3E%3Cpath d='M14 35c8-18 28-24 38-7' fill='none' stroke='%2327c6c9' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M15 43c12-12 25-14 35-5' fill='none' stroke='%23ff4f45' stroke-width='5' stroke-linecap='round'/%3E%3Ccircle cx='18' cy='47' r='4' fill='%23fff'/%3E%3C/svg%3E" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="overrides.css" />
   </head>
   <body>
     <header class="site-header">
@@ -45,18 +46,9 @@
               <span data-i18n="hero.meta2">Từ chiến lược đến triển khai</span>
             </div>
           </div>
-          <div class="hero-visual" aria-hidden="true">
-            <div class="orbit orbit-one"></div>
-            <div class="orbit orbit-two"></div>
-            <div class="signal signal-one"></div>
-            <div class="signal signal-two"></div>
-            <div class="signal signal-three"></div>
-            <div class="visual-card visual-card-main">
-              <span class="card-label">RAWIQ / INTELLIGENCE LAYER</span>
-              <div class="card-chart"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-              <div class="card-footer"><strong>Agentic workflows</strong><span>ready to scale</span></div>
-            </div>
-            <div class="visual-card visual-card-side"><span class="mini-dot"></span><strong>01</strong><span data-i18n="hero.visual">Mỗi quyết định<br />bắt đầu từ dữ liệu</span></div>
+          <div class="hero-visual hero-image">
+            <img src="assets/rawiq-data-flow.png" alt="Minh họa dòng chảy dữ liệu và AI của RawIQ" />
+            <div class="hero-image-caption"><span class="mini-dot"></span><strong data-i18n="hero.visualTitle">Data → AI → Value</strong><span data-i18n="hero.visual">Mỗi quyết định bắt đầu từ dữ liệu</span></div>
           </div>
         </div>
       </section>
@@ -69,10 +61,8 @@
           </div>
           <div class="about-copy">
             <p data-i18n="about.body1">RawIQ được xây dựng bởi những chuyên gia đã nhiều năm làm việc với hệ thống dữ liệu lớn, data lake, data products và AI cho ngân hàng, tài chính.</p>
-            <p data-i18n="about.body2">Chúng tôi kết hợp năng lực kỹ thuật tiêu chuẩn quốc tế với hiểu biết sâu về nghiệp vụ tài chính để biến tham vọng AI thành nền tảng, sản phẩm và kết quả bền vững.</p>
-            <div class="expertise-list">
-              <span>AI research</span><span>NLP</span><span>Computer vision</span><span>Cloud architecture</span><span>Data leadership</span><span>Banking AI</span>
-            </div>
+            <div class="expertise-grid"><div><strong>Data</strong><span>Platforms &amp; products</span></div><div><strong>AI</strong><span>Research &amp; delivery</span></div><div><strong>Finance</strong><span>Banking domain depth</span></div></div>
+            <p class="about-note" data-i18n="about.body2">Kỹ thuật tiêu chuẩn quốc tế, hiểu biết sâu về nghiệp vụ tài chính.</p>
           </div>
         </div>
         <div class="container institution-strip">
@@ -112,8 +102,8 @@
 
       <section id="case-study" class="section section-case">
         <div class="container case-grid">
-          <div class="case-intro"><p class="section-kicker" data-i18n="case.kicker">Tình huống tiêu biểu</p><h2 data-i18n="case.title">Tái thiết kế quy trình cấp tín dụng bằng AI agents.</h2><p data-i18n="case.body">Một bộ hồ sơ vay có thể chứa hàng chục trang tài liệu và yêu cầu nhiều bước kiểm tra chéo. RawIQ kết nối các agent để biến quy trình rời rạc thành một luồng liền mạch, có kiểm soát và dễ truy xuất.</p><a class="button button-primary" href="mailto:team@rawiq-ai.com" data-i18n="case.cta">Trao đổi về bài toán của bạn <span>↗</span></a></div>
-          <div class="case-flow"><div class="flow-line"></div><div class="flow-step"><b>01</b><span data-i18n="case.step1">Tiếp nhận &amp; kiểm tra hồ sơ</span><small>Doc Check</small></div><div class="flow-step"><b>02</b><span data-i18n="case.step2">Phân tích &amp; hoàn thiện đề xuất</span><small>Analytics</small></div><div class="flow-step"><b>03</b><span data-i18n="case.step3">Báo cáo &amp; quyết định</span><small>Reports Maker</small></div><div class="case-note" data-i18n="case.note">Minh họa tiềm năng vận hành — không phải kết quả khách hàng đã được xác minh.</div></div>
+          <div class="case-intro"><p class="section-kicker" data-i18n="case.kicker">Tình huống tiêu biểu</p><h2 data-i18n="case.title">Tái thiết kế quy trình cấp tín dụng bằng AI agents.</h2><p data-i18n="case.body">RawIQ kết nối các agent để biến hồ sơ, phân tích và báo cáo thành một luồng liền mạch.</p><a class="button button-primary" href="mailto:team@rawiq-ai.com" data-i18n="case.cta">Trao đổi về bài toán của bạn <span>↗</span></a></div>
+          <div class="case-visual"><img src="assets/rawiq-lending-workflow.png" alt="Minh họa quy trình hồ sơ vay được kiểm tra, phân tích và phê duyệt bằng AI" /><div class="case-tags"><span>Doc Check</span><span>Analytics</span><span>Reports Maker</span></div><div class="case-note" data-i18n="case.note">Minh họa tiềm năng vận hành — không phải kết quả khách hàng đã được xác minh.</div></div>
         </div>
       </section>
 
